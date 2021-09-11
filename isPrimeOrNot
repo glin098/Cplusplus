@@ -1,0 +1,44 @@
+#include <iostream>
+#include <math.h> 
+using namespace std;
+
+int main() {
+
+  int i;
+  int num;
+  bool isPrime = true;
+
+  cout << "enter a number between 2 and 100: ";
+  cin >> num;
+
+  while(1){
+
+  if(cin.fail()){
+  cin.clear();
+  cin.ignore(numeric_limits<streamsize>::max(),'\n');
+  cout << "please enter a number between 2 and 100: \n";
+  cin >> num;
+  }
+
+  if (num < 2 || num > 100){
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(),'\n');
+    cout << "that is not a number between 2 and 100: \n";
+    cin >> num;
+  }
+
+  if(!cin.fail())
+  break;
+  }
+
+  for (i = 2; i <= num / 2; i++){
+    if (num % i == 0)
+    isPrime = false;
+  }
+  
+  if (isPrime)
+  cout << "the number is prime.";
+  else 
+  cout << "the number is not prime.";
+
+}
