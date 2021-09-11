@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+  //create a vector containing the integers 1 to a number that the user enters then loop through the vector and display all entries that are not a multiple of 7 or 13
+
+int number;
+cout << "enter a number: ";
+cin >> number;
+
+vector<int> numbers;
+
+for (int i = 1; i <= number; i++){ 
+  numbers.push_back(i);
+}
+
+for (int i : numbers){
+  if ((i % 7 != 0) and (i % 13 != 0)){
+    cout << i << endl;
+  }
+}
+}
