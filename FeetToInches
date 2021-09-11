@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  cout << "Enter your desired length (in inches) that you want to convert to feet:\n";
+  int inches;
+  int feet;
+  int r;
+  cin >> inches;
+  feet = inches / 12;
+  r = inches % 12;
+  cout << "It is " << feet << " feet and " << r << " inches";
+}
