@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+//Q1
+std::string fruit {};
+std::cout << "What is your favorite fruit?" << std::endl;
+std::cin >> fruit;
+std::cout << "I like " << fruit << "'s too!" << std::endl <<std::endl;
+
+//Q2
+int age {};
+std::cout << "How old are you?" << std::endl;
+std::cin >> age;
+age = age + 25;
+std::cout << "In 25 years you will be " << age << std::endl << std::endl;
+
+//Q3
+float celsius {};
+float far {};
+std::cout << "Enter a temperature in Celsius" << std::endl;
+std::cin >> celsius;
+far = (1.8 * celsius) + 32.0;
+std::cout << celsius << " celsius is equivalent to " << far << " Fahrenheit.\n" << std::endl;
+
+//Q4
+
+int beats;
+float seconds;
+int pulse;
+
+cout << "How many beats were observed? ";
+cin >> beats;
+cout << "How many seconds were observed? ";
+cin >> seconds;
+
+pulse = (60 / seconds) * beats;
+
+cout << "The pulse is "<< pulse << " beats per minute\n";
+
+//Q5 
+float m;
+float n;
+float s;
+
+cout << "\nEnter the first number: ";
+cin >> m;
+cout << "Enter the second number: ";
+cin >> n;
+
+s = (n - m + 1) * (m + n) / 2;
+
+cout << "The sum of the numbers from " << m << " to " << n << " is " << s << ".";
+
+}
