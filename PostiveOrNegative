@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+float n;
+cout << "Enter a number: ";
+cin >> n;
+
+while(1)
+{
+if(cin.fail())
+{
+cin.clear();
+cin.ignore(numeric_limits<streamsize>::max(),'\n');
+
+cout << "you have entered the wrong input\n";
+cin >> n;
+}
+if(!cin.fail())
+break;
+}
+
+if (n < 0)
+cout << "the number is negative.";
+
+if (n == 0)
+cout << "the number is zero.";
+
+if (n > 0)
+cout << "the number is positive.";
+
+return 0;
+
+}
