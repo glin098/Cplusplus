@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+#include <random>
+#include <chrono>
+
+int main() {
+  using std::cout, std::endl;
+  using std::cin;
+  using std::string; 
+  std::default_random_engine generator(std::chrono::system_clock::now().time_since_epoch().count());
+
+  std::uniform_int_distribution<int> distribution(1,100);
+  
+  int number = distribution(generator);
+  int guess;
+
+  cout << "I’ve picked a random number from 1 to 100, try to guess it.\n\n";
+ 
+  int numberGuesses{0};
+
+  while (guess != number){
+    cout << "Enter your guess: " << endl;
+    cin >> guess;
+    if (guess > number)
+    cout << "too high" << endl;
+
+    else if (guess < number)
+    cout << "too low" << endl;
+    
+    numberGuesses++;
+
+  }
+  cout << "You found it in " << numberGuesses << " guesses!" << endl;
+}
