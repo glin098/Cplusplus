@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+int totalCents;
+int quarter;
+int dimes;
+int nickel;
+int penny;
+
+cout << "Enter a monetary amount in cents: ";
+cin >> totalCents;
+
+while(1)
+{
+if(cin.fail())
+{
+cin.clear();
+cin.ignore(numeric_limits<streamsize>::max(),'\n');
+
+cout << "you have entered the wrong input\n\nEnter a monetary amount in cents: ";
+cin >> totalCents;
+}
+if(!cin.fail())
+break;
+}
+
+quarter = totalCents / 25;
+totalCents = totalCents % 25; 
+
+dimes = totalCents / 10;
+totalCents = totalCents % 10;
+
+nickel = totalCents / 5;
+totalCents = totalCents % 5;
+
+penny = totalCents;
+
+cout << "There are " << quarter << " quarters, " << dimes << " dimes, " << nickel << " nickels, and " << penny << " pennies.";
+
+}
