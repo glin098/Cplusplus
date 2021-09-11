@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+int main() {
+  char x;
+
+  cout << "Enter a single character: ";
+  cin >> x;
+
+  if (isupper(x))
+  cout << "you entered an uppercase letter";
+  else if (islower(x))
+  cout << "you entered a lowercase letter";
+  else if (isdigit(x))
+  cout << "you entered a number";
+  else 
+  cout << "you entered something else";
+
+}
