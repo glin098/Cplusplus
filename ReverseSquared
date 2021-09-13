@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+#include <algorithm> 
+using namespace std;
+
+int main() {
+    int userInput;
+    cout << "Enter a number: ";
+    cin >> userInput;
+    
+    vector<int> n;
+    
+    for(int i = 1; i <= userInput; i++){
+        n.push_back(i);
+    }
+    
+    reverse(n.begin(), n.end());
+    
+    for (int i : n){
+        i *= i;
+        cout << i <<endl;
+    }
+}
