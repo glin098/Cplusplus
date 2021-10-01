@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+class CashRegister{
+  private:
+  int total{0};
+  
+  public: 
+  void purchase(int numberOfItems, int price){
+      total += numberOfItems*price;
+  }
+  
+  int getTotal(){
+      return total;
+  }
+  
+  void getClear(){
+      total = 0;
+  }
+};
+
+int main(){
+    int x;
+    CashRegister register1;
+    register1.purchase(2, 10);
+    x = register1.getTotal();
+    
+    cout << "The total is " << x << " dollars.";
+    register1.getClear();
+}
